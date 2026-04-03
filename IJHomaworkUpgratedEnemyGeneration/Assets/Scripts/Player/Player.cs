@@ -1,15 +1,12 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Collider), typeof(Rigidbody))]
+[RequireComponent(typeof(Collider), typeof(Rigidbody), typeof(PlayerMover))]
 public class Player : MonoBehaviour
 {
     public PlayerMover Mover { get; private set; }
 
     private void Awake()
     {
-        if (TryGetComponent(out PlayerMover playerMover))
-        {
-            Mover = playerMover;
-        }
+       Mover = GetComponent<PlayerMover>();
     }
 }

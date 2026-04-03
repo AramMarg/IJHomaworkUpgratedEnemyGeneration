@@ -35,10 +35,7 @@ public class SpawnHandler : MonoBehaviour
         {
             foreach (var enemySpawner in _enemySpawners)
             {
-                if (enemySpawner.Create().TryGetComponent(out EnemyMover enemyMover))
-                {
-                    enemyMover.SetTarget(_targets[_indexTarget++]);
-                }
+                enemySpawner.Create().EnemyMover.SetTarget(_targets[_indexTarget++]);
             }
 
             _indexTarget = 0;
