@@ -16,9 +16,4 @@ public class EnemyMover : MonoBehaviour
     {
         Target = target;
     }
-
-    public void ResetTarget()
-    {
-        Target = null;
-    }
 }

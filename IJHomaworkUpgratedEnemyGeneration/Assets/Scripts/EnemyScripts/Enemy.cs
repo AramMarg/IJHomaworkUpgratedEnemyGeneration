@@ -15,18 +15,10 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Player player = EnemyMover.Target;
-
-        if (player != null)
+        if (collision.gameObject == EnemyMover.Target.gameObject)
         {
-            if (collision.gameObject == EnemyMover.Target.gameObject)
-            {
-                PlayerCatched?.Invoke(this);
-
-                player.Die();
-
-                EnemyMover.ResetTarget();
-            }
+            PlayerCatched?.Invoke(this);
         }
-    }    
+        
+    }
 }
