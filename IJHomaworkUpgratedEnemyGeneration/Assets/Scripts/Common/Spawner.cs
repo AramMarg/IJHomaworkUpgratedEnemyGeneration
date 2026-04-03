@@ -7,11 +7,11 @@ public class Spawner<T> : MonoBehaviour where T : Component
     [SerializeField] private int _poolCapacity = 5;
     [SerializeField] private int _maxSize = 5;
 
-    protected ObjectPool<T> _pool;
+    protected ObjectPool<T> Pool;
 
     private void Awake()
     {
-        _pool = new ObjectPool<T>
+        Pool = new ObjectPool<T>
         (
         createFunc: () => Instantiate(_prefab),
         actionOnGet: (item) => OnGet(item),
@@ -25,12 +25,12 @@ public class Spawner<T> : MonoBehaviour where T : Component
 
     public T Create()
     {
-        return _pool.Get();
+        return Pool.Get();
     }
 
     public void Return(T item)
     {
-        _pool.Release(item);
+        Pool.Release(item);
     }
 
     protected virtual void OnGet(T item)

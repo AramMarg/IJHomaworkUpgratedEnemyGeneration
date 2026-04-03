@@ -9,20 +9,12 @@ public class PlayerSpawner : Spawner<Player>
     {
         base.OnGet(player);
 
-        player.transform.position = GetSpawnNextPosition();
+        player.transform.position = GenerateSpawnPosition();
 
-        if (player.TryGetComponent(out PlayerMover playerMover))
-        {
-            playerMover.SetWayPoints(_wayPoints);
-        }
+        player.Mover.SetWayPoints(_wayPoints);
     }
 
-    protected override void OnRelease(Player player)
-    {
-        base.OnRelease(player);
-    }
-
-    private  Vector3 GetSpawnNextPosition()
+    private  Vector3 GenerateSpawnPosition()
     {
         int minForRandom = 0;
         int maxForRandom = _wayPoints.Length;

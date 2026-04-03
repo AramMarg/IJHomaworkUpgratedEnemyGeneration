@@ -19,6 +19,5 @@ public class Enemy : MonoBehaviour
         {
             PlayerCatched?.Invoke(this);
         }
-        
     }
 }

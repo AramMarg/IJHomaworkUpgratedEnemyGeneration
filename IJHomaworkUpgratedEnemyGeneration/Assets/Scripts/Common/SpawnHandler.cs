@@ -21,7 +21,7 @@ public class SpawnHandler : MonoBehaviour
     {
         _wait = new(_delay);
 
-        foreach (var enemySpawner in _enemySpawners)
+        for (int i = 0; i < _enemySpawners.Count; i++)
         {
             _targets.Add(_playerSpawner.Create());
         }

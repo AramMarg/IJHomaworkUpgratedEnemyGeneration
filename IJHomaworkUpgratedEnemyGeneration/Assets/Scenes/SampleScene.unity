@@ -237,7 +237,6 @@ MonoBehaviour:
   _poolCapacity: 5
   _maxSize: 5
   _spawnPoint: {fileID: 2127576049}
-  playerSpawner: {fileID: 657012719}
 --- !u!114 &657012717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +253,6 @@ MonoBehaviour:
   _poolCapacity: 5
   _maxSize: 5
   _spawnPoint: {fileID: 1598908126}
-  playerSpawner: {fileID: 657012719}
 --- !u!114 &657012718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +269,6 @@ MonoBehaviour:
   _poolCapacity: 5
   _maxSize: 5
   _spawnPoint: {fileID: 2012806912}
-  playerSpawner: {fileID: 657012719}
 --- !u!114 &657012719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,8 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 602860832926173752, guid: 549c4d94be8ef4db3b2e8818184ef649, type: 3}
-  _poolCapacity: 10
-  _maxSize: 10
+  _poolCapacity: 3
+  _maxSize: 3
   _wayPoints:
   - {fileID: 1619539594}
   - {fileID: 108618442}
